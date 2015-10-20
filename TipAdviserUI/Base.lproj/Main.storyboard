@@ -43,12 +43,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recommended tips:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PB5-Db-PUJ">
-                                <rect key="frame" x="222" y="481" width="157" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vvD-3G-jZd">
                                 <rect key="frame" x="183" y="6" width="342" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -60,18 +54,36 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Hu-uT-26v">
-                                <rect key="frame" x="0.0" y="38" width="600" height="162"/>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$$$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2r-l4-WeO">
                                 <rect key="frame" x="270" y="542" width="61" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RC1-Bw-qZC">
+                                <rect key="frame" x="246" y="479" width="109" height="30"/>
+                                <state key="normal" title="Calculate tips">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculateTips:" destination="vXZ-lx-hvc" eventType="touchDown" id="EfC-TR-e9m"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Hu-uT-26v">
+                                <rect key="frame" x="0.0" y="38" width="600" height="162"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="billAmmountTextField" destination="vvD-3G-jZd" id="aZw-Dp-YZf"/>
+                        <outlet property="calculateButton" destination="RC1-Bw-qZC" id="zG3-pH-vBt"/>
+                        <outlet property="foodQualitySlider" destination="Z20-Bb-cS6" id="DVb-WR-y8v"/>
+                        <outlet property="restaurantsWheel" destination="1Hu-uT-26v" id="mM7-KE-kAW"/>
+                        <outlet property="serviceQualitySlider" destination="c0S-zk-1ar" id="lLd-hr-tFN"/>
+                        <outlet property="tipsAmmountLabel" destination="Q2r-l4-WeO" id="Kn1-he-pxh"/>
+                        <outlet property="waitingTimeSlider" destination="gPt-wh-Ir4" id="ITw-QJ-g84"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
