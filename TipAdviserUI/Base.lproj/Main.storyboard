@@ -79,7 +79,7 @@
                         <outlet property="billAmmountTextField" destination="vvD-3G-jZd" id="aZw-Dp-YZf"/>
                         <outlet property="calculateButton" destination="RC1-Bw-qZC" id="zG3-pH-vBt"/>
                         <outlet property="foodQualitySlider" destination="Z20-Bb-cS6" id="DVb-WR-y8v"/>
-                        <outlet property="restaurantsWheel" destination="1Hu-uT-26v" id="mM7-KE-kAW"/>
+                        <outlet property="picker" destination="1Hu-uT-26v" id="XKm-Ad-Eha"/>
                         <outlet property="serviceQualitySlider" destination="c0S-zk-1ar" id="lLd-hr-tFN"/>
                         <outlet property="tipsAmmountLabel" destination="Q2r-l4-WeO" id="Kn1-he-pxh"/>
                         <outlet property="waitingTimeSlider" destination="gPt-wh-Ir4" id="ITw-QJ-g84"/>
