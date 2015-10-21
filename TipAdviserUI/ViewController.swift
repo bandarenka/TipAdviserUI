@@ -12,6 +12,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     @IBOutlet weak var calculateButton: UIButton!
     
+    @IBOutlet weak var averageTipsLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    
     @IBOutlet weak var tipsAmmountLabel: UILabel!
     
     @IBOutlet weak var waitingTimeSlider: UISlider!
@@ -24,6 +27,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var billAmmountTextField: UITextField!
     
     var pickerData: [String] = [String]()
+    var restaurantsPickerData: [Restaurant] = [Restaurant]()
+    var currentRestaurant: Restaurant = Restaurant()
     
     @IBAction func calculateTips(sender: AnyObject) {
         
@@ -42,8 +47,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         billAmmount = (billAmmountTextField.text as NSString).floatValue
         
         recommendedTips = calculateTips(billAmmount, waitingTime: waitingTimeValue, serviceQuality: serviceQualityValue, foodQuality: foodQualityValue)
-        
+       
+        currentRestaurant.updateTips(recommendedTips)
         tipsAmmountLabel.text = recommendedTips.description
+        ratingLabel.text = currentRestaurant.rating.description
+        averageTipsLabel.text = currentRestaurant.averageTips.description
     }
     
     func calculateTips(billAmmount: Float, waitingTime: Float, serviceQuality: Float, foodQuality: Float) -> Int  {
@@ -59,6 +67,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         percentage = 0.2
         averageSatisfaction = (waitingTime + serviceQuality + foodQuality) / 3
+        
+        currentRestaurant.updateRating(averageSatisfaction)
         
         var recommendedRate = percentage * averageSatisfaction
         var calculatedAmmount = recommendedRate * billAmmount
@@ -85,6 +95,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.picker.delegate = self
         self.picker.dataSource = self
         pickerData = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"]
+        
+        restaurantsPickerData.append(Restaurant(name: "Restaurant1", address: "address1"))
+        restaurantsPickerData.append(Restaurant(name: "Restaurant2", address: "address2"))
+        restaurantsPickerData.append(Restaurant(name: "Restaurant3", address: "address3"))
+        restaurantsPickerData.append(Restaurant(name: "Restaurant4", address: "address4"))
+        restaurantsPickerData.append(Restaurant(name: "Restaurant5", address: "address5"))
+        
 
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -101,12 +118,19 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     // The number of rows of data
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
+        return restaurantsPickerData.count
     }
     
     // The data to return for the row and component (column) that's being passed in
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
+        currentRestaurant = restaurantsPickerData[row]
+        return currentRestaurant.name
+        
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        ratingLabel.text = restaurantsPickerData[row].rating.description
+        averageTipsLabel.text = restaurantsPickerData[row].averageTips.description
     }
 
 }

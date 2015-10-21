@@ -72,14 +72,40 @@
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Hu-uT-26v">
                                 <rect key="frame" x="0.0" y="38" width="600" height="162"/>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restaurant rating:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIn-zq-2De">
+                                <rect key="frame" x="39" y="483" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ype-xj-OMC">
+                                <rect key="frame" x="76" y="526" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restaurant average tips:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkq-OY-H3r">
+                                <rect key="frame" x="5" y="356" width="194" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oA7-l2-nT3">
+                                <rect key="frame" x="81" y="399" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="averageTipsLabel" destination="oA7-l2-nT3" id="Bc6-Ih-nri"/>
                         <outlet property="billAmmountTextField" destination="vvD-3G-jZd" id="aZw-Dp-YZf"/>
                         <outlet property="calculateButton" destination="RC1-Bw-qZC" id="zG3-pH-vBt"/>
                         <outlet property="foodQualitySlider" destination="Z20-Bb-cS6" id="DVb-WR-y8v"/>
                         <outlet property="picker" destination="1Hu-uT-26v" id="XKm-Ad-Eha"/>
+                        <outlet property="ratingLabel" destination="ype-xj-OMC" id="ONC-DK-2pU"/>
                         <outlet property="serviceQualitySlider" destination="c0S-zk-1ar" id="lLd-hr-tFN"/>
                         <outlet property="tipsAmmountLabel" destination="Q2r-l4-WeO" id="Kn1-he-pxh"/>
                         <outlet property="waitingTimeSlider" destination="gPt-wh-Ir4" id="ITw-QJ-g84"/>
