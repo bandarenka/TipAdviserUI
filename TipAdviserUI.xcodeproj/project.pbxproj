@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8440B11B1BD812F100B49A0F /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440B11A1BD812F100B49A0F /* Restaurant.swift */; };
+		8440B11D1BD81AAB00B49A0F /* TipsCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440B11C1BD81AAB00B49A0F /* TipsCalculator.swift */; };
+		8440B11F1BD81B9F00B49A0F /* Criteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440B11E1BD81B9F00B49A0F /* Criteria.swift */; };
 		8446D5CE1BCFFC4E00C04C35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446D5CD1BCFFC4E00C04C35 /* AppDelegate.swift */; };
 		8446D5D11BCFFC4E00C04C35 /* TipAdviserUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8446D5CF1BCFFC4E00C04C35 /* TipAdviserUI.xcdatamodeld */; };
 		8446D5D31BCFFC4E00C04C35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446D5D21BCFFC4E00C04C35 /* ViewController.swift */; };
@@ -29,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		8440B11A1BD812F100B49A0F /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		8440B11C1BD81AAB00B49A0F /* TipsCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsCalculator.swift; sourceTree = "<group>"; };
+		8440B11E1BD81B9F00B49A0F /* Criteria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Criteria.swift; sourceTree = "<group>"; };
 		8446D5C81BCFFC4E00C04C35 /* TipAdviserUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipAdviserUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8446D5CC1BCFFC4E00C04C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8446D5CD1BCFFC4E00C04C35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				8446D5CC1BCFFC4E00C04C35 /* Info.plist */,
+				8440B11C1BD81AAB00B49A0F /* TipsCalculator.swift */,
+				8440B11E1BD81B9F00B49A0F /* Criteria.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -218,7 +224,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8440B11F1BD81B9F00B49A0F /* Criteria.swift in Sources */,
 				8440B11B1BD812F100B49A0F /* Restaurant.swift in Sources */,
+				8440B11D1BD81AAB00B49A0F /* TipsCalculator.swift in Sources */,
 				8446D5D31BCFFC4E00C04C35 /* ViewController.swift in Sources */,
 				8446D5D11BCFFC4E00C04C35 /* TipAdviserUI.xcdatamodeld in Sources */,
 				8446D5CE1BCFFC4E00C04C35 /* AppDelegate.swift in Sources */,
