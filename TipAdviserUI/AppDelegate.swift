@@ -12,9 +12,34 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var currentRestaurant: Restaurant = Restaurant()
+    var restaurantsPickerData: [Restaurant] = [Restaurant]()
     var window: UIWindow?
 
 
+    func updateCurrentRestaraunt(newRating: Float, newTips: Int)
+    {
+        currentRestaurant.updateRating(newRating)
+        currentRestaurant.updateTips(newTips)
+    }
+    
+    func restaurantsCount() -> Int {
+        return restaurantsPickerData.count
+    }
+    
+    func setCurrentRestaraunt(row: Int) {
+        currentRestaurant = restaurantsPickerData[row]
+    }
+    
+    func initRestaurantsPickerData() {
+        restaurantsPickerData.append(Restaurant(name: "Restaurant1", address: "address1"))
+        restaurantsPickerData.append(Restaurant(name: "Restaurant2", address: "address2"))
+        restaurantsPickerData.append(Restaurant(name: "Restaurant3", address: "address3"))
+        restaurantsPickerData.append(Restaurant(name: "Restaurant4", address: "address4"))
+        restaurantsPickerData.append(Restaurant(name: "Restaurant5", address: "address5"))
+    }
+
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
